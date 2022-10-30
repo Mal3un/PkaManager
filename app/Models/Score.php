@@ -48,7 +48,7 @@ class Score extends Model
         $total = ($this->listpoint_score * 0.1) + ($this->midterm_score * 0.3) + ($this->lastterm_score * 0.6);
         return $total;
     }
-    public function getRankByScore($score){
+    public static function getRankByScore($score){
         if($score >= 9) {
             return 'A+';
         }
